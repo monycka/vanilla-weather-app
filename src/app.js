@@ -99,8 +99,8 @@ function searchingCity(event) {
   let units = "imperial";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `${apiEndpoint}q=${cityName}&appid=${apiKey}&units=${units}`;
-
   axios.get(apiUrl).then(currentWeather);
+  
 }
 
 let city = document.querySelector("#search-input");
@@ -119,7 +119,7 @@ let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&uni
 axios.get(apiUrl).then(currentWeather);
 }
  
-let currentCity = document.querySelector("#user-location");
+let currentCity = document.querySelector("#current-location");
 currentCity.addEventListener("click", currentLocation);
 
 //City on Open
