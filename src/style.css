@@ -1,5 +1,5 @@
 body {
-  font-family: 'Felipa', cursive;
+  font-family: 'Pangolin', cursive;
   font-size: 24px;
   text-align: center;
 }
@@ -16,7 +16,7 @@ footer {
 }
 
 .chance, .daily {
-  color: #3a0ca3;
+  color: #fff;
 }
 
 .current-place {
@@ -30,17 +30,17 @@ footer {
 }
 
 .right {
-  background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%);
+  background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
   border: 0;
   margin: 0;
   padding: 0;
 }
 
 .search-form {
-  margin: 10px;
-  padding: 10px;
-  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-  border-radius: 5px;
+  background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
+  border-radius: 5px solid transparent;
+  margin: 20px;
+  padding: 30px;
 }
 
 .temperature {
@@ -50,4 +50,8 @@ footer {
 
 #current-city {
   color: #7209b7;
+}
+
+#search, #user-location {
+  color: #b91372;
 }
