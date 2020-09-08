@@ -38,40 +38,17 @@ dateElement.innerHTML = date(currentDate);
 
 //Time
 function time(time) {
-  let hours = [
-    "12",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-  ];
-  let hour = hours[time.getHours()];
+  let hours = time.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
 
   let minutes = time.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  return `Time: ${hour}:${minutes}`;
+  return `${hours}:${minutes}`;
 }
 
 let timeElement = document.querySelector("#current-time");

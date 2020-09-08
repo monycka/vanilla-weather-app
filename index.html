@@ -20,7 +20,9 @@
 
   <body>
     <div class="container" id="container">
-      <div class="search-form" id="search-input">
+
+      <div class="search-form">
+        <form id="search-input">
         <div class="row">
           <div class="col-6">
             <input
@@ -50,6 +52,7 @@
             </div> 
         </div>
       </div>
+        </form>
 
       <div class="container">
         <div class="row no-gutters">
@@ -61,7 +64,9 @@
             <span class="time">
               <span id="current-date"></span>
               <br />
-              <span id="current-time"></span>
+              <span>
+                Last updated: <span id="current-time"></span>
+              </span>
             </span>
             <br />
             <span class="temperature" id="temperature">
