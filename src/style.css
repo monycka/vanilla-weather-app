@@ -1,53 +1,61 @@
 body {
   font-family: 'Pangolin', cursive;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
 }
 
 footer {
   color: #0e0004;
-  font-size: 16px;
+  font-size: 14px;
   margin: 20px;
 }
 
-.card-body {
+.daily {
+  color: #fff;
+}
+
+.col-6 {
   padding: 0;
   margin: 0;
 }
 
-.chance, .daily {
-  color: #fff;
-}
-
-.current-place {
+.time {
   color: #2274a5;
-  font-size: 26px;
   margin: 2px;
 }
 
 .form-control {
-  font-size: 26px;
-}
-
-.right {
-  background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
-  border: 0;
-  margin: 0;
-  padding: 0;
+  font-size: 22px;
 }
 
 .search-form {
   background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
-  border-radius: 5px solid transparent;
+  border: 10px;
+  border-radius: 20px;
   margin: 20px;
   padding: 30px;
 }
 
 .temperature {
   color: #610345;
-  font-size: 52px;
+  font-size: 48px;
+}
+
+#container {
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+  width: 950px;
 }
 
 #location, #search, #user-location {
   color: #b91372;
+}
+
+#right-side {
+  background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
+  border: 0px;
+  border-radius: 20px;
+  margin: 0px;
+  padding: 0px;
 }
