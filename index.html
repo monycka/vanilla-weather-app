@@ -20,7 +20,7 @@
 
       <div class="container">
         <div class="card search-form">
-            <form class="search-input id="search-input">
+            <form class="search-input" id="search-input">
                 <div class="row">
                     <div class="col-6 search-input">
                         <input type="search" placeholder="Type a city..." class="form-control" id="searching" autofocus="on"
@@ -43,7 +43,10 @@
       <div class="col-5" id="left-side">
         <div class="current-place">
           <span class="card-text current-place">
-            <span id="current-city"></span>
+            <span id="location">
+            <span id="current-city"></span>, <span id="country"></span>  
+            </span>
+            
             <br />
             <span id="current-date"></span>
             <br />
@@ -121,7 +124,7 @@
     <a href="https://github.com/monycka/vanilla-weather-app">Open-source code</a>
     by Monica Colorado
   </footer>
-  <script src="src/index.js"></script>
+  <script src="src/app.js"></script>
     </div>
   </body>
 </html>
