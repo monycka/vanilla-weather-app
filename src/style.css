@@ -41,6 +41,12 @@ footer {
   font-size: 48px;
 }
 
+#celsius-link, #fahrenheit-link, #bar {
+  font-size: 32px;
+  position: relative;
+  top: -10px;
+}
+
 #container {
   border-radius: 20px;
   margin: 0 auto;

@@ -59,9 +59,8 @@ timeElement.innerHTML = time(currentTime);
 function currentWeather(response) {
   document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#current-city").innerHTML = response.data.name;
-  document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  fahrenheitTemperature = response.data.main.temp;
+  document.querySelector("#current-temperature").innerHTML = Math.round(fahrenheitTemperature);
   document.querySelector("#daily-high").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -95,6 +94,33 @@ function searchingCity(event) {
 
 let city = document.querySelector("#search-input");
 city.addEventListener("submit", searchingCity);
+
+//Celsius & Fahrenheit
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let celsiusTemperature = (fahrenheitTemperature - 32) * 5 / 9;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 
 //Current Location
 function currentLocation(position) {
