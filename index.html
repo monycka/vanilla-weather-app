@@ -56,7 +56,7 @@
 
       <div class="container">
         <div class="row no-gutters">
-          <div class="col" id="left-side">
+          <div class="col-6" id="left-side">
             <span id="location">
               <span id="current-city"></span>, <span id="country"></span>
             </span>
@@ -70,14 +70,14 @@
             </span>
             <br />
             <span class="temperature" id="temperature">
-              <img src="" alt="Clear" id="icon" />
+              <img src="" alt="Clear" id="current-icon" />
               <span id="current-temperature"></span>
               <span class="units">
-                <a href="#" id="fahrenheit-link">°F</a><span id="bar">|</span><a href="#" id="celsius-link">°C</a></span>
+                <a href="#" class="active" id="fahrenheit-link">°F</a><span id="bar">|</span><a href="#" id="celsius-link">°C</a></span>
             </span>
           </div>
 
-          <div class="col" id="right-side">
+          <div class="col-6" id="right-side">
             <span class="daily">
               <span> Today: </span><span id="weather-description"></span>
               <br />
@@ -93,6 +93,15 @@
             </span>
           </div>
 
+        </div>
+      </div>
+
+      <div class="hourly">
+        <div class="row no-gutters">
+            <div class="col-3">1</div>
+            <div class="col-3">2</div>
+            <div class="col-3">3</div>
+            <div class="col-3">4</div>
         </div>
       </div>
 

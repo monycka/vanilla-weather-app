@@ -71,9 +71,9 @@ function currentWeather(response) {
     response.data.main.feels_like
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#icon").setAttribute("src",
+  document.querySelector("#current-icon").setAttribute("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
+  document.querySelector("#current-icon").setAttribute("alt", response.data.weather[0].description);
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#wind-speed").innerHTML = Math.round(

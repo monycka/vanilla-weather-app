@@ -10,6 +10,15 @@ footer {
   margin: 20px;
 }
 
+.active {
+  color: #610345;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
 .daily {
   color: #fff;
 }
@@ -28,7 +37,7 @@ footer {
   font-size: 22px;
 }
 
-.search-form {
+.hourly, .search-form {
   background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
   border: 10px;
   border-radius: 20px;
