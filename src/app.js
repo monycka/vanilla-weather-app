@@ -37,13 +37,14 @@ let currentDate = new Date();
 dateElement.innerHTML = date(currentDate);
 
 //Time
-function time(time) {
-  let hours = time.getHours();
+function formatTime(timestamp) {
+  let date = new Date(timestamp)
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
 
-  let minutes = time.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -53,7 +54,36 @@ function time(time) {
 
 let timeElement = document.querySelector("#current-time");
 let currentTime = new Date();
-timeElement.innerHTML = time(currentTime);
+timeElement.innerHTML = formatTime(currentTime);
+
+//Forecast
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="col-2">
+      <span id="forecast-hours">
+        ${formatTime(forecast.dt * 1000)}
+      </span>
+      <img
+        src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png"
+      />
+      <div class="weather-forecast-temperature">
+        <span id="temp-max">
+          ${Math.round(forecast.main.temp_max)}°
+        </span>
+        ${Math.round(forecast.main.temp_min)}°
+      </div>
+    </div>
+  `;
+  }
+}
 
 //Search City
 function currentWeather(response) {
@@ -87,9 +117,13 @@ function searchingCity(event) {
   let cityName = citySearch.value;
   let apiKey = "43d48c14e180f75f558e0def6bf829b0";
   let units = "imperial";
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
-  let apiUrl = `${apiEndpoint}q=${cityName}&appid=${apiKey}&units=${units}`;
+  let apiEndpoint = `https://api.openweathermap.org/data/2.5/`;
+  let apiUrl = `${apiEndpoint}weather?q=${cityName}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(currentWeather);
+  
+  apiUrl = `${apiEndpoint}forecast?q=${cityName}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+  console.log(apiUrl);
 }
 
 let city = document.querySelector("#search-input");
@@ -142,8 +176,12 @@ currentCity.addEventListener("click", currentLocation);
 function searchCity(city) {
   let apiKey = "43d48c14e180f75f558e0def6bf829b0";
   let units = "imperial";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiEndpoint = `https://api.openweathermap.org/data/2.5/`;
+  let apiUrl = `${apiEndpoint}weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(currentWeather);
+
+  apiUrl = `${apiEndpoint}forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 searchCity("San Francisco");

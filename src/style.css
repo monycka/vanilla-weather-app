@@ -29,14 +29,18 @@ footer {
   color: #fff;
 }
 
+
 .form-control {
   font-size: 22px;
 }
 
-.search-form, .hourly {
-  background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
-  border: 10px;
+.hourly, .search-form, #right-side {
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
   border-radius: 20px;
+}
+
+.search-form, .hourly {
+  border: 10px;
   margin: 20px;
   padding: 30px;
 }
@@ -73,14 +77,20 @@ footer {
   color: #b91372;
 }
 
+#forecast-hours {
+  color: #610345;
+}
+
 #location {
   font-size: 32px;
 }
 
 #right-side {
-  background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
   border: 0px;
-  border-radius: 20px;
   margin: 0px;
   padding: 0px;
+}
+
+#temp-max {
+  color: #0e0004;
 }
