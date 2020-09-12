@@ -23,6 +23,7 @@ footer {
 .col-6 {
   padding: 0;
   margin: 0;
+  border: 0;
 }
 
 #daily, .hourly {
@@ -48,7 +49,7 @@ footer {
 }
 
 .time {
-  color: #2274a5;
+  color: #3f86bc;
 }
 
 #bar, #celsius-link, #fahrenheit-link {
@@ -69,12 +70,12 @@ footer {
   width: 75px;
 }
 
-#current-location, #location, #search, #user-location {
+#current-location, #search, #user-location {
   color: #b91372;
 }
 
 #daily {
-  color: #3c096c;
+  color: #3a0ca3;
 }
 
 #forecast-hours {
@@ -82,24 +83,10 @@ footer {
 }
 
 #location {
+  color: #f72585;
   font-size: 32px;
-}
-
-#right-side {
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
 }
 
 #temp-max {
   color: #0e0004;
 }
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
