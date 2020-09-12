@@ -25,21 +25,17 @@ footer {
   margin: 0;
 }
 
-.daily, .hourly {
+#daily, .hourly {
   color: #fff;
 }
-
 
 .form-control {
   font-size: 22px;
 }
 
-.hourly, .search-form, #right-side {
+.hourly, .search-form {
   background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
   border-radius: 20px;
-}
-
-.search-form, .hourly {
   border: 10px;
   margin: 20px;
   padding: 30px;
@@ -55,7 +51,7 @@ footer {
   color: #2274a5;
 }
 
-#celsius-link, #fahrenheit-link, #bar {
+#bar, #celsius-link, #fahrenheit-link {
   font-size: 32px;
   position: relative;
   top: -10px;
@@ -77,6 +73,10 @@ footer {
   color: #b91372;
 }
 
+#daily {
+  color: #3c096c;
+}
+
 #forecast-hours {
   color: #610345;
 }
@@ -94,3 +94,12 @@ footer {
 #temp-max {
   color: #0e0004;
 }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }

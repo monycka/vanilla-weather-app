@@ -20,92 +20,106 @@
 
   <body>
     <div class="container" id="container">
-
-      <div class="search-form">
-        <form id="search-input">
-        <div class="row">
-          <div class="col-6">
-            <input
-                type="search"
-                placeholder="Type a city..."
-                class="form-control"
-                id="searching"
-                autofocus="on"
-                autocomplete="off"
-              />
+      <div class="container">
+        <div class="search-form">
+          <form id="search-input">
+            <div class="row row-no-gutters">
+              <div class="col-6">
+                <input
+                    type="search"
+                    placeholder="Type a city..."
+                    class="form-control"
+                    id="searching"
+                    autofocus="on"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="SEARCH"
+                    class="form-control btn btn-light"
+                    id="search"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="Current Location"
+                    class="form-control btn btn-light"
+                    id="current-location"
+                  />
+                </div>  
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="SEARCH"
-                class="form-control btn btn-light"
-                id="search"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Current Location"
-                class="form-control btn btn-light"
-                id="current-location"
-              />
-            </div> 
+          </form>
         </div>
       </div>
-        </form>
 
       <div class="container">
-        <div class="row no-gutters">
-          <div class="col-6" id="left-side">
-            <span id="location">
-              <span id="current-city"></span>, <span id="country"></span>
-            </span>
-            <br />
+        <div class="middle">
+          <div class="row row-no-gutters" id="middle">
+            <div class="col-6">
+              <span class="left-side">
+                <span id="location">
+                  <span id="current-city"></span>, <span id="country"></span>
+                </span>
+                <br />
             <span class="time">
-              <span id="current-date"></span>
+            <span id="current-date"></span>
               <br />
               <span>
                 Last updated: <span id="current-time"></span>
-              </span>
+              </span>  
             </span>
-            <br />
+            <br>
             <span class="temperature" id="temperature">
               <img src="" alt="Clear" id="current-icon" />
               <span id="current-temperature"></span>
               <span class="units">
                 <a href="#" class="active" id="fahrenheit-link">°F</a><span id="bar">|</span><a href="#" id="celsius-link">°C</a></span>
-            </span>
-          </div>
-
-          <div class="col-6" id="right-side">
-            <div class="daily">
-              <span> Today: </span><span id="weather-description"></span>
-              <br />
-              <span>Feels like: </span><span id="feels-like"></span><span>°F</span>
-              <br />
-              <span>Daily high: </span><span id="daily-high"></span><span>°F</span>
-              <br />
-              <span>Daily low: </span><span id="daily-low"></span><span>°F</span>
-              <br />
-              <span>Humidity: </span><span id="humidity"></span><span>%</span>
-              <br />
-              <span>Wind speed: </span><span id="wind-speed"></span><span>mph</span>
+            </span> 
+              </span>
             </div>
+            <div class="col-6">
+              <div class="right-side">
+                <span class="daily">
+                <span id="daily">
+                  <span>Today: </span><span id="weather-description"></span>
+                    <br />
+                    <span>Feels like: </span><span id="feels-like"></span><span>°F</span>
+                    <br />
+                    <span>Daily high: </span><span id="daily-high"></span><span>°F</span>
+                    <br />
+                    <span>Daily low: </span><span id="daily-low"></span><span>°F</span>
+                    <br />
+                    <span>Humidity: </span><span id="humidity"></span><span>%</span>
+                    <br />
+                    <span>Wind speed: </span><span id="wind-speed"></span><span>mph</span>   
+                  </span>
+              </span>
+              </div>
+              
           </div>
-
+        </div>
         </div>
       </div>
-
+      
+      <div class="container">
       <div class="hourly">
-        <div class="row no-gutters" id="forecast"></div>
+        <div class="row row-no-gutters" id="forecast"></div>
+      </div>  
       </div>
-
+      
       <footer>
         <a href="https://github.com/monycka/vanilla-weather-app"
           >Open-source code</a
         >
         by Monica Colorado
       </footer>
+
+    </div>
+
+      
       <script src="src/app.js"></script>
     </div>
   </body>
