@@ -70,14 +70,14 @@ function displayForecast(response) {
         ${formatTime(forecast.dt * 1000)}
       </span>
       <img
-        src="http://openweathermap.org/img/wn/${
+        src="https://openweathermap.org/img/wn/${
           forecast.weather[0].icon
         }@2x.png"
       />
-      <div class="weather-forecast-temperature">
+      <div class="forecast-temperature">
         <span id="temp-max">
           ${Math.round(forecast.main.temp_max)}°
-        </span>
+        </span> 
         ${Math.round(forecast.main.temp_min)}°
       </div>
     </div>

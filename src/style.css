@@ -12,7 +12,7 @@ footer {
 }
 
 .active {
-  color: #610345;
+  color: #03045e;
   cursor: default;
 }
 
@@ -20,22 +20,20 @@ footer {
   text-decoration: none;
 }
 
-.col-6 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-#daily, .hourly {
-  color: #fff;
+.dateTime {
+  color: #3f86bc;
 }
 
 .form-control {
   font-size: 22px;
 }
 
+.hourly {
+  color: #fff;
+}
+
 .hourly, .search-form {
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
   border-radius: 20px;
   border: 10px;
   margin: 20px;
@@ -43,13 +41,9 @@ footer {
 }
 
 .temperature {
-  color: #610345;
+  color: #03045e;
   font-size: 52px;
   line-height: 1;
-}
-
-.time {
-  color: #3f86bc;
 }
 
 #bar, #celsius-link, #fahrenheit-link {
@@ -74,12 +68,8 @@ footer {
   color: #b91372;
 }
 
-#daily {
+#daily, #forecast-hours {
   color: #3a0ca3;
-}
-
-#forecast-hours {
-  color: #610345;
 }
 
 #location {
