@@ -1,6 +1,6 @@
 body {
   font-family: 'Pangolin', cursive;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.5;
   text-align: center;
 }
@@ -12,7 +12,7 @@ footer {
 }
 
 .active {
-  color: #03045e;
+  color: #3a0ca3;
   cursor: default;
 }
 
@@ -25,7 +25,7 @@ footer {
 }
 
 .form-control {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .hourly {
@@ -37,19 +37,25 @@ footer {
   border-radius: 20px;
   border: 10px;
   margin: 20px;
-  padding: 30px;
+  padding: 10px;
+}
+
+.middle {
+  border: 10px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .temperature {
-  color: #03045e;
+  color: #3a0ca3;
   font-size: 52px;
   line-height: 1;
 }
 
 #bar, #celsius-link, #fahrenheit-link {
-  font-size: 32px;
+  font-size: 28px;
   position: relative;
-  top: -10px;
+  top: -15px;
 }
 
 #container {
@@ -68,12 +74,16 @@ footer {
   color: #b91372;
 }
 
-#daily, #forecast-hours {
+#daily-conditions, #daily-temperatures {
+  color: #2a9d8f;
+}
+
+#forecast-hours {
   color: #3a0ca3;
 }
 
 #location {
-  color: #f72585;
+  color: #b91372;
   font-size: 32px;
 }
 
