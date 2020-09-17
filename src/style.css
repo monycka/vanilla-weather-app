@@ -32,18 +32,15 @@ footer {
   color: #fff;
 }
 
-.hourly, .search-form {
-  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
-  border-radius: 20px;
+.hourly, .middle, .search-form {
   border: 10px;
   margin: 20px;
   padding: 10px;
 }
 
-.middle {
-  border: 10px;
-  margin: 20px;
-  padding: 10px;
+.hourly, .search-form {
+  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+  border-radius: 20px;
 }
 
 .temperature {

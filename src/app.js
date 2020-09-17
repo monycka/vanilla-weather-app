@@ -123,7 +123,6 @@ function searchingCity(event) {
   
   apiUrl = `${apiEndpoint}forecast?q=${cityName}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
-  console.log(apiUrl);
 }
 
 let city = document.querySelector("#search-input");
