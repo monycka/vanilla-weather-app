@@ -156,8 +156,11 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
 //Current Location
-function currentLocation(position) {
+function myCurrentLocation() {
   navigator.geolocation.getCurrentPosition(currentLocation);
+}
+
+function currentLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "43d48c14e180f75f558e0def6bf829b0";
@@ -169,7 +172,7 @@ function currentLocation(position) {
 }
 
 let currentCity = document.querySelector("#current-location");
-currentCity.addEventListener("click", currentLocation);
+currentCity.addEventListener("click", myCurrentLocation);
 
 //City on Open
 function searchCity(city) {
