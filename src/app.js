@@ -114,14 +114,15 @@ function currentWeather(response) {
 function searchingCity(event) {
   event.preventDefault();
   let citySearch = document.querySelector("#searching");
-  let cityName = citySearch.value;
+  let city = citySearch.value;
   let apiKey = "43d48c14e180f75f558e0def6bf829b0";
   let units = "imperial";
   let apiEndpoint = `https://api.openweathermap.org/data/2.5/`;
-  let apiUrl = `${apiEndpoint}weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `${apiEndpoint}weather?q=${city}&appid=${apiKey}&units=${units}`;
+
   axios.get(apiUrl).then(currentWeather);
   
-  apiUrl = `${apiEndpoint}forecast?q=${cityName}&appid=${apiKey}&units=${units}`;
+  apiUrl = `${apiEndpoint}forecast?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -165,10 +166,12 @@ function currentLocation(position) {
   let longitude = position.coords.longitude;
   let apiKey = "43d48c14e180f75f558e0def6bf829b0";
   let units = "imperial";
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
-  let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-
+  let apiEndpoint = `https://api.openweathermap.org/data/2.5/`;
+  let apiUrl = `${apiEndpoint}weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(currentWeather);
+
+  apiUrl = `${apiEndpoint}forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 let currentCity = document.querySelector("#current-location");
@@ -178,7 +181,7 @@ currentCity.addEventListener("click", myCurrentLocation);
 function searchCity(city) {
   let apiKey = "43d48c14e180f75f558e0def6bf829b0";
   let units = "imperial";
-  let apiEndpoint = `https://api.openweathermap.org/data/2.5/`;
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/";
   let apiUrl = `${apiEndpoint}weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(currentWeather);
 
